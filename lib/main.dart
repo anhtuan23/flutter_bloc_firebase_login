@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_firebase_login/authentication_bloc/authentication_bloc.dart';
 import 'package:flutter_bloc_firebase_login/simple_bloc_delegate.dart';
 import 'package:flutter_bloc_firebase_login/user_repository.dart';
-import 'bloc/blocs.dart';
 import 'screens/screens.dart';
 
 void main() {
