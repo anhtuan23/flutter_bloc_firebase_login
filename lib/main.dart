@@ -34,6 +34,9 @@ class App extends StatelessWidget {
           if (state is AuthenticationInitial) {
             return SplashScreen();
           }
+          if (state is AuthenticationSuccess) {
+            return HomeScreen(name: state.displayName);
+          }
           return Container();
         },
       ),
