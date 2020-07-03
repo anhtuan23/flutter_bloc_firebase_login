@@ -3,9 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_firebase_login/simple_bloc_delegate.dart';
 import 'package:flutter_bloc_firebase_login/user_repository.dart';
 import 'bloc/blocs.dart';
+import 'screens/screens.dart';
 
 void main() {
-WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   BlocSupervisor.delegate = SimpleBlocDelegate();
   final UserRepository userRepository = UserRepository();
   runApp(
@@ -30,6 +31,9 @@ class App extends StatelessWidget {
     return MaterialApp(
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state) {
+          if (state is AuthenticationInitial) {
+            return SplashScreen();
+          }
           return Container();
         },
       ),
