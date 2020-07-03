@@ -6,6 +6,7 @@ import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../../user_repository.dart';
+import '../../validators.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';
