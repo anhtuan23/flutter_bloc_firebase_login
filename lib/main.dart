@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_firebase_login/simple_bloc_delegate.dart';
 import 'package:flutter_bloc_firebase_login/user_repository.dart';
 import 'bloc/blocs.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+WidgetsFlutterBinding.ensureInitialized();
+  BlocSupervisor.delegate = SimpleBlocDelegate();
   final UserRepository userRepository = UserRepository();
   runApp(
     BlocProvider(
